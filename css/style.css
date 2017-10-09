@@ -1,0 +1,382 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Regular-webfont.eot');
+	src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),  url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),  url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'open_sanslight';
+	src: url('../fonts/OpenSans-Light-webfont.eot');
+	src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Light-webfont.woff') format('woff'),  url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),  url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'open_sanssemibold';
+	src: url('../fonts/OpenSans-Semibold-webfont.eot');
+	src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),  url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),  url('../fonts/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'open_sansitalic';
+	src: url('../fonts/OpenSans-Italic-webfont.eot');
+	src: url('../fonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Italic-webfont.woff') format('woff'),  url('../fonts/OpenSans-Italic-webfont.ttf') format('truetype'),  url('../fonts/OpenSans-Italic-webfont.svg#open_sanssemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+h1, h2, h3, h4 {
+	font-weight:normal;
+	margin:0
+}
+body {
+	background:#f0efef;
+	margin:0;
+	padding:0;
+	font-family: 'open_sanslight', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #a3a3a3;
+}
+ul {
+	list-style:none;
+	margin:0;
+	padding:0
+}
+* {
+	transition:all ease-in 300ms
+}
+.container {
+	width:100%; /*margin:0 auto;*/
+	background: #f9f9f9;
+	overflow:hidden;
+	min-height:400px;
+	padding:0px;
+	border-top:5px solid #226A8C;
+}
+.container .area {
+	padding:15px;
+	box-sizing:border-box;
+	border: 1px solid #eee;
+	width:50%;
+	background:#fff;
+	float: left;
+}
+/* .container .area.grid{min-width:530px}
+.container .area.pie{min-width: 791px;} */
+.bodyWrap {
+	float: left;
+	width: 100%;
+}
+aside {
+	border-left:1px solid #2a2a2a;
+	float: left;
+	background: #d9d9d8;
+	width:100%;
+	display:none
+}
+header, footer {
+	float:left;
+	width:100%
+}
+header h1 {
+	margin:15px;
+	float: left
+}
+header .settings {
+	float: right;
+	margin:15px;
+	background:url('../images/settings-alt.png') 50% 50% no-repeat;
+	width:32px;
+	height:32px;
+	border:none;
+	outline:none;
+	cursor:pointer
+}
+header .settings:hover {
+	transform: rotate(90deg);
+}
+#chart-nav a {
+	display: block;
+	width:100%;
+	height:40px;
+	text-indent: -9999px;
+	border-left:5px solid #D94F30
+}
+#chart-nav li {
+	float:left;
+	width:33.3%;
+}
+#chart-nav a.bar {
+	background:#D94F30 url('../images/bar.png') 13px 50% no-repeat;
+}
+#chart-nav a.pie {
+	background:#D94F30 url('../images/pie.png') 9px 50% no-repeat;
+}
+#chart-nav a.line {
+	background:#D94F30 url('../images/line.png') 10px 50% no-repeat;
+}
+#chart-nav a.active {
+	border-color:#2a2a2a;
+	box-shadow:-4px 0px 5px rgba(0,0,0,.4) inset
+}
+.graphWrap {
+	float: left;
+	width: 100%;
+}
+.graphWrap .DataRow {
+	float:left;
+	width:100%;
+}
+.graphWrap .DataRow .DataCol {
+	border-right:1px #F0F0F0 solid;
+	float:left;
+	width: 16.5%;
+}
+.graphWrap .DataRow .DataCol span {
+	color:#fff;
+	background-color:#c0bebe;
+	width:100%;
+	text-align:center;
+	padding:5px 0;
+	float:left;
+}
+.graphWrap .DataRow .DataCol.dark span {
+	background:#a3a3a3!important
+}
+/*****************content row**********************/
+.graphWrap .DataRow.contentRow {
+	height:293px
+}
+.graphWrap .DataRow.contentRow .DataCol {
+	float:left;
+	background:#f9f9f9;
+	position:relative;
+	height:293px
+}
+.graphWrap .DataRow.contentRow .DataCol span {
+	padding:5px 0;
+	float:left
+}
+.graphWrap .DataRow.contentRow .DataCol .barGraph {
+	height:0;
+	width:100%;
+	color:#FFF;
+	position: absolute;
+	bottom: 0
+}
+.graphWrap .DataRow.contentRow .DataCol .barGraph .bar {
+	height:0;
+	width:100%;
+	float:left;
+	background:#a5dcef;
+	position:absolute;
+	bottom:20px;
+}
+.graphWrap .DataRow.contentRow .DataCol .barGraph .bar:hover {
+	background:#8ED3EA
+}
+.graphWrap .DataRow.contentRow .DataCol .barGraph h2 {
+	font-size:16px;
+	text-align:center;
+	width:100%;
+	float:left;
+	background:#6fbcdd;
+	line-height:18px;
+	padding-bottom:2px;
+	position:absolute;
+	bottom:0;
+	color:#fff
+}
+div.row {
+	float: left;
+	width: 100%;
+}
+.svgWrap {
+	float:left;
+	float: left;
+	padding: 10px 21px;
+	position:relative;
+	margin-left: 15px;
+	background: #f9f9f9;
+}
+.svgWrap:first-child {
+	margin-left:0
+}
+.lineChartWrap {
+	float:left;
+	width:100%;
+	background: #f9f9f9;
+}
+.legends {
+	display:block;
+	margin-left: 60px
+}
+.legends li {
+	margin:5px;
+}
+.legends li span {
+	width:10px;
+	height:10px;
+	display: inline-block;
+}
+.legends li label {
+	margin-left:10px
+}
+.legends li.q1 span {
+	background:#F2DC9B;
+}
+.legends li.q2 span {
+	background:#F2C53D;
+}
+.legends li.q3 span {
+	background:#F2A444;
+}
+.legends li.q4 span {
+	background:#D94F30;
+}
+.legends.blue li.q1 span {
+	background:#bbe8f7;
+}
+.legends.blue li.q2 span {
+	background:#a5dcef;
+}
+.legends.blue li.q3 span {
+	background:#85d3ed;
+}
+.legends.blue li.q4 span {
+	background:#6fbcdd;
+}
+.legends.line {
+	position: absolute;
+	right: 0;
+	top: 5px;
+}
+.dataGrid {
+	border-collapse: collapse;
+	margin-bottom: 25px;
+}
+.dataGrid th {
+	background: #c0bebe;
+	padding:7px 15px;
+	color: #ffffff;
+}
+.dataGrid td {
+	border-right: 1px solid #f0f0f0;
+	background: #f9f9f9;
+	padding: 15px;
+	color: #7f7f7f;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 16px;
+}
+.dataGrid th:first-child, .dataGrid tr.altr td {
+	background: none;
+}
+.dataGrid td:first-child {
+	font-family: 'open_sanssemibold';
+}
+.dataGrid tr:hover td {
+	background:#E2E2E2
+}
+.dataGrid tr:hover td:first-child {
+	background:#c0bebe;
+	color:#fff
+}
+.tooltipWrap {
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	z-index:2;
+	display:none
+}
+.tooltipWrap .toolBody {
+	border:1px solid #ddd;
+	background:#fff;
+	color:#D94F30;
+	padding:10px;
+	box-shadow:3px 3px 0px rgba(0,0,0,0.3);
+	font-family: 'Open Sans';
+	width:120px;
+	position:absolute;
+	left:-150px;
+	top:-150px
+}
+ @media (max-width:1599px) {
+.container {
+	width:1190px;
+	margin:0 auto;
+}
+.svgWrap {
+	padding: 10px;
+	margin:32px 0 0 0;
+}
+.svgWrap:first-child {
+	margin-top:0
+}
+div.row {
+	position:relative;
+}
+div.row.last {
+	width: 941px;
+}
+.container .area {
+	clear:both;
+	width: 941px;
+}
+.container .area.pie {
+	width: 250px;
+	position:absolute;
+	right:0;
+	top:0
+}
+}
+@media (max-width:1190px) {
+.container {
+	width:950px;
+	margin:0 auto;
+}
+.svgWrap {
+	padding: 10px;
+	margin:32px 0 0 0;
+}
+.bodyWrap {
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+div.row.last {
+	width: 656px;
+}
+.container .area {
+	clear:both;
+	width: 656px;
+}
+}
+@media (max-width:800px) {
+.container {
+	width:686px;
+	margin:0 auto;
+}
+.svgWrap {
+	padding: 0;
+	margin:0 0 0 11px;
+}
+.bodyWrap {
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+div.row.last {
+	width: 656px;
+}
+.container .area {
+	clear:both;
+	width: 100%;
+}
+.container .area.pie {
+	width: 100%;
+	position:relative
+}
+}

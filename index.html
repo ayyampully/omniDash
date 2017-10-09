@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+<title>omniDash</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>omniDash<sup style="font-size: 12px;">beta</sup></h1>
+  <button class="settings"></button>
+</header>
+<div class="bodyWrap">
+  <aside>
+    <nav id="chart-nav">
+      <ul>
+        <li><a href="#" class="bar active">line chart</a></li>
+        <li><a href="#" class="pie">line chart</a></li>
+        <li><a href="#" class="line">line chart</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="tooltipWrap">
+    <div class="toolBody">
+      <label>Some tooltip</label>
+    </div>
+    <div class="overlay"></div>
+  </div>
+  <div class="row">
+  <section class="area">
+    <div class="graphWrap">
+      <div class="DataRow">
+        <div class="DataCol dark"><span>2015 Total</span></div>
+        <div class="DataCol"><span>2014 Total</span></div>
+        <div class="DataCol"><span>2013 Total</span></div>
+        <div class="DataCol"><span>2012 Total</span></div>
+        <div class="DataCol"><span>2011 Total</span></div>
+        <div class="DataCol"><span>2010 Total</span></div>
+      </div>
+      <div class="DataRow contentRow">
+        <div class="DataCol">
+          <div class="barGraph">
+            <div class="bar"></div>
+            <h2>7900</h2>
+          </div>
+        </div>
+        <div class="DataCol">
+          <div class="barGraph">
+            <div class="bar"></div>
+            <h2>8900</h2>
+          </div>
+        </div>
+        <div class="DataCol">
+          <div class="barGraph">
+            <div class="bar"></div>
+            <h2>8500</h2>
+          </div>
+        </div>
+        <div class="DataCol">
+          <div class="barGraph">
+            <div class="bar"></div>
+            <h2>9000</h2>
+          </div>
+        </div>
+        <div class="DataCol">
+          <div class="barGraph">
+            <div class="bar"></div>
+            <h2>6000</h2>
+          </div>
+        </div>
+        <div class="DataCol">
+          <div class="barGraph">
+            <div class="bar"></div>
+            <h2>8200</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="area pie">
+      <div class="svgWrap">
+		  <svg class="pie-chart" id="pie-chart" width="200" height="200" aria-label="A chart." style="overflow: hidden;"></svg>
+          <ul class="legends blue">
+              <li class="q1">
+                  <span></span>
+                  <label>
+                  2015 Q1
+                  <label>
+              <li>
+              <li class="q2">
+                  <span></span>
+                  <label>
+                  2015 Q2
+                  <label>
+              <li>
+              <li class="q3">
+                  <span></span>
+                  <label>
+                  2015 Q3
+                  <label>
+              <li>
+              <li class="q4">
+                  <span></span>
+                  <label>
+                  2015 Q4
+                  <label>
+              <li>
+          </ul>
+      </div>
+      <div class="svgWrap">
+          <svg class="pie-chart" id="pie-chart-2" data-theme="yellow" width="200" height="200" aria-label="A chart." style="overflow: hidden;"></svg>
+          <ul class="legends">
+              <li class="q1">
+                  <span></span>
+                  <label>
+                  2014 Q1
+                  <label>
+              <li>
+              <li class="q2">
+                  <span></span>
+                  <label>
+                  2014 Q2
+                  <label>
+              <li>
+              <li class="q3">
+                  <span></span>
+                  <label>
+                  2014 Q3
+                  <label>
+              <li>
+              <li class="q4">
+                  <span></span>
+                  <label>
+                  2014 Q4
+                  <label>
+              <li>
+          </ul>
+      </div>
+      <div class="svgWrap">
+          <svg class="pie-chart" id="pie-chart-3" data-theme="yellow" width="200" height="200" aria-label="A chart." style="overflow: hidden;"></svg>
+          <ul class="legends">
+              <li class="q1">
+                  <span></span>
+                  <label>
+                  2014 Q1
+                  <label>
+              <li>
+              <li class="q2">
+                  <span></span>
+                  <label>
+                  2014 Q2
+                  <label>
+              <li>
+              <li class="q3">
+                  <span></span>
+                  <label>
+                  2014 Q3
+                  <label>
+              <li>
+              <li class="q4">
+                  <span></span>
+                  <label>
+                  2014 Q4
+                  <label>
+              <li>
+          </ul>
+      </div>
+  </section>
+  </div>
+  <div class="row last">
+    <section class="area">
+    <div class="lineChartWrap">
+    <div class="svgWrap">
+    <svg class="line-chart" id="line-chart" width="600" height="310" aria-label="A chart." style="overflow: hidden;">
+    <g>
+      <line x1="45" y1="5" x2="45" y2="285" style="stroke:#ccc;stroke-width:2" />
+      <line x1="44" y1="285" x2="585" y2="285" style="stroke:#ccc;stroke-width:2" />
+    </g>
+    <g>
+      <text x="32" y="285" fill="#222">0</text>
+      <text x="10" y="235" fill="#222">1000</text>
+      <line x1="42" y1="231" x2="585" y2="231" style="stroke:#eee;stroke-width:1" />
+      <text x="10" y="185" fill="#222">2000</text>
+      <line x1="42" y1="181" x2="585" y2="181" style="stroke:#eee;stroke-width:1" />
+      <text x="10" y="135" fill="#222">3000</text>
+      <line x1="42" y1="131" x2="585" y2="131" style="stroke:#eee;stroke-width:1" />
+      <text x="10" y="85" fill="#222">4000</text>
+      <line x1="42" y1="81" x2="545" y2="81" style="stroke:#eee;stroke-width:1" />
+      <text x="10" y="35" fill="#222">5000</text>
+      <line x1="42" y1="31" x2="545" y2="31" style="stroke:#eee;stroke-width:1" />
+    </g>
+    <g>
+      <text x="145" y="300" fill="#222">Q1</text>
+      <text x="245" y="300" fill="#222">Q2</text>
+      <text x="345" y="300" fill="#222">Q3</text>
+      <text x="445" y="300" fill="#222">Q4</text>
+    </g>
+    </svg>
+    <ul class="legends line">
+        <li class="q1">
+            <span></span>
+            <label>
+            2015
+            <label>
+        <li>
+        <li class="q2">
+            <span></span>
+            <label>
+            2014
+            <label>
+        <li>
+            <li class="q3">
+            <span></span>
+            <label>
+            2013
+            <label>
+        <li>
+            <li class="q4">
+            <span></span>
+            <label>
+            2012
+            <label>
+        <li>
+    </ul>
+    </div>
+    </div>
+    </section>
+    <section class="area grid">
+    <table class="dataGrid" width="100%">
+      <tr>
+        <th></th>
+        <th>Q1</th>
+        <th>Q2</th>
+        <th>Q3</th>
+        <th>Q4</th>
+        <th>Total</th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>2015</td>
+          <td>1200</td>
+          <td>2800</td>
+          <td>3400</td>
+          <td>500</td>
+          <td>7900</td>
+        </tr>
+        <tr class="altr">
+          <td>2014</td>
+          <td>2200</td>
+          <td>3800</td>
+          <td>1400</td>
+          <td>1500</td>
+          <td>8900</td>
+        </tr>
+        <tr>
+          <td>2013</td>
+          <td>120,000</td>
+          <td>2800</td>
+          <td>1700</td>
+          <td>3000</td>
+          <td>8500</td>
+        </tr>
+        <tr class="altr">
+          <td>2012</td>
+          <td>3200</td>
+          <td>1800</td>
+          <td>2000</td>
+          <td>2000</td>
+          <td>9000</td>
+        </tr>
+        <tr >
+          <td>2011</td>
+          <td>2200</td>
+          <td>3800</td>
+          <td>1400</td>
+          <td>1500</td>
+          <td>8900</td>
+        </tr>
+        <tr class="altr">
+          <td>2010</td>
+          <td>120,000</td>
+          <td>2800</td>
+          <td>1700</td>
+          <td>3000</td>
+          <td>8500</td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+  </div>
+  <footer>
+    <p style="text-align:center">&copy;2016 omniDash</p>
+  </footer>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/app.js"></script>
+</body>
+</html>
